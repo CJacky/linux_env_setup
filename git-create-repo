@@ -1,0 +1,17 @@
+#!/bin/bash
+
+GITUSER="replace to your Github name"
+GITPASS="replace to your Github password"
+GITREPO=${PWD##*/}
+
+set -x
+
+curl -u "${GITUSER}:${GITPASS}" https://api.github.com/user/repos -d "{\"name\":\"${GITREPO}\"}"
+
+git init
+echo "# ${GITREPO}" >> README.md
+
+git add .
+git commit -m "Create Repo"
+git remote add origin git@github.com:${GITUSER}/${GITREPO}.git
+git push origin master
