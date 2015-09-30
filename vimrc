@@ -1,18 +1,20 @@
 source ~/.cscope_maps.vim
 
-set nu 
-set ai
+set number 
+set autoindent "
 syntax on
 set tabstop=4
 set shiftwidth=4
 set hlsearch
-set ic
+set ignorecase
+set cursorline 
 
 
+
+" maximum current window and restore
 nnoremap <C-W>O :call MaximizeToggle()<CR>
 nnoremap <C-W>o :call MaximizeToggle()<CR>
 nnoremap <C-W><C-O> :call MaximizeToggle()<CR>
-
 function! MaximizeToggle()
 	if exists("s:maximize_session")
 		exec "source " . s:maximize_session
