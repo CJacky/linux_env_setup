@@ -9,7 +9,7 @@ set hlsearch
 set ignorecase
 set cursorline 
 
-
+hi CursorLine term=none cterm=none ctermbg=Black
 
 " maximum current window and restore
 nnoremap <C-W>O :call MaximizeToggle()<CR>
