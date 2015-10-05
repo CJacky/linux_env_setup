@@ -13,7 +13,10 @@ hi CursorLine term=none cterm=none ctermbg=Black
 
 set tags=tags;/
 set cscopetag
-set cscopetagorder=0  " cscope is first
+
+" 0 cscope first
+" 1 ctags first
+set cscopetagorder=0
 
 
 function! LoadCscope()
