@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rm -rf cscope.in.out cscope.out cscope.po.out tags
+
+echo "ctags -R"
+ctags -R
+
+echo "cscope -Rqb$@"
+cscope -Rqb$@
