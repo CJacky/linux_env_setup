@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+if [ $# -ne 0 ];
+then
+	msg=$@
+else
+	msg=update
+fi
+
+set -e
+set -x
+
+git add -A
+git commit -m "$msg"
+git push 
