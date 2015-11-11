@@ -10,6 +10,9 @@ set ignorecase
 set cursorline 
 
 hi CursorLine term=none cterm=none ctermbg=Black
+hi ColorColumn term=none cterm=none ctermbg=Black
+
+set colorcolumn=81
 
 set tags=tags;/
 set cscopetag
