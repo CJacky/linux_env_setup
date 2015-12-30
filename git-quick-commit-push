@@ -1,24 +1,12 @@
 #!/bin/bash
 
 
-all="no"
 msg="update"
 
-set -e
-
-for p in $@
-do
-	if [ $p = "all" ]; then
-		all="yes"
-	else
-		msg="$p"
-	fi
-done
-
-
-if [ "$all" = "yes" ]; then 
-git add -A
+if [ ! -z "$1" ]; then
+	msg="$1"
 fi
 
+git add -A
 git commit -m "$msg"
 git push 
